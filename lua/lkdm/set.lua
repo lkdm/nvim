@@ -59,4 +59,4 @@ vim.cmd("highlight Constant guifg=#999999")
 vim.cmd("highlight NormalFloat guibg=#333333")
 
 -- Rust-specific settings
-vim.cmd("autocmd Filetype rs set comments^=:///")
+vim.cmd("autocmd Filetype rust set comments^=:///")
