@@ -50,13 +50,13 @@ vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]()
 vim.g.netrw_list_hide = vim.g.netrw_list_hide .. ',\\(^\\|\\s\\s\\)\\zs\\.\\S\\+'
 
 -- Set colorscheme
-vim.cmd("colorscheme quiet")
+-- vim.cmd("colorscheme quiet")
 
 -- Highlight settings
 vim.cmd("highlight Keyword gui=bold")
 vim.cmd("highlight Comment gui=italic")
-vim.cmd("highlight Constant guifg=#999999")
-vim.cmd("highlight NormalFloat guibg=#333333")
+-- vim.cmd("highlight Constant guifg=#999999")
+-- vim.cmd("highlight NormalFloat guibg=#333333")
 
 -- Rust-specific settings
 vim.cmd("autocmd Filetype rust set comments^=:///")

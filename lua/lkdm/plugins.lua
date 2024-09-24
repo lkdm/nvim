@@ -32,5 +32,8 @@ require('pckr').add {
     { 'hrsh7th/nvim-cmp' },
 
     -- Treesitter
-    'nvim-treesitter/nvim-treesitter'
+    'nvim-treesitter/nvim-treesitter',
+
+    -- Theme
+    'TheNiteCoder/mountaineer.vim'
 }
