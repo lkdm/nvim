@@ -17,7 +17,9 @@ end
 
 -- reload config
 map("n", "<leader>r", ":so %<CR>")
-
+map("n", "<leader>ga", ":!git add .<CR><CR>")
+map("n", "<leader>gc", ":!git commit -m '")
+map("n", "<leader>gp", ":!git push origin<CR>")
 
 
 vim.cmd [[colorscheme mountaineer]]
