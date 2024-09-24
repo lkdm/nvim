@@ -2,11 +2,23 @@ require("lkdm.set")
 require("lkdm.plugins")
 require("lkdm.lsp")
 require("lkdm.rust")
-print("🚀 We have liftoff")
+print("I use nvim btw 🤓")
 
-local augroup = vim.api.nvim_create_augroup
-local RustFiletypeGroup = augroup('RustFiletypeGroup', {})
-local TypescriptFiletypeGroup = augroup('TypescriptFiletypeGroup', {})
+vim.g.mapleader = ","
+
+-- function for declaring keybinds
+function map(mode, lhs, rhs, opts)
+    local options = { noremap = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+-- reload config
+map("n", "<leader>r", ":so %<CR>")
+
+
 
 vim.cmd [[colorscheme mountaineer]]
 

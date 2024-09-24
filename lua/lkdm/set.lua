@@ -4,20 +4,25 @@ vim.opt.compatible = false
 -- Set options
 vim.opt.showmatch = true
 vim.opt.ignorecase = true
-vim.opt.hlsearch = true
-vim.opt.incsearch = true
-vim.opt.tabstop = 4
+vim.opt.smartcase = true                -- case matters if capital letter
+vim.opt.inccommand = "split"            -- highlights search pattern as you type it
+vim.opt.hlsearch = true                 -- Disable all highlighted search results
+vim.opt.incsearch = true                -- Enable incremental searching
+vim.opt.tabstop = 4                     -- Tabs = 4 spaces
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
-vim.opt.number = true
+vim.opt.number = true                   -- Turn on line numbers
+vim.opt.relativenumber = true           -- Turn on relative line numbers
+vim.opt.signcolumn = "number"           -- specify use number as sign col
 vim.opt.wildmode = "longest,list"
 vim.opt.cc = "80"
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.ttyfast = true
 vim.opt.scrolloff = 999
+vim.opt.sidescrolloff = 8
 vim.opt.lazyredraw = true
 vim.opt.regexpengine = 1
 vim.opt.path:append("**")
@@ -25,6 +30,14 @@ vim.opt.hidden = true
 vim.opt.wildmenu = true
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
+vim.opt.fileencoding = "utf-8"
+vim.opt.clipboard = unamedplus
+vim.opt.splitbelow = true               -- If split, new window goes to bottom
+vim.opt.splitright = true               -- If split, new window goes on right
+
+-- Undo and redo
+vim.opt.undofile = true -- save undo history
+local keyset = vim.keymap.set
 
 -- Enable filetype detection, plugin, and indent
 vim.cmd("filetype plugin indent on")
