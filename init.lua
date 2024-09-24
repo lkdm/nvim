@@ -1,1 +1,1 @@
-require("lua.lkdm")
+require("lkdm")

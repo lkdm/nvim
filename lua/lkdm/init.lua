@@ -1,1 +1,2 @@
-print("Hello from lkdm")
+require("lkdm.set")
+print("🚀 We have liftoff")

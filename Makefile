@@ -7,4 +7,4 @@ init:
 
 link:
 	@echo "Creating link at ~/nvim to this repository."
-	ln -sfn $(shell pwd) ~/nvim
+	ln -sf $(shell pwd) ~/.config/nvim
