@@ -9,3 +9,4 @@ local RustFiletypeGroup = augroup('RustFiletypeGroup', {})
 local TypescriptFiletypeGroup = augroup('TypescriptFiletypeGroup', {})
 
 vim.cmd [[colorscheme mountaineer]]
+

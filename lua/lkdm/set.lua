@@ -42,10 +42,14 @@ vim.opt.wildignore:append("*node_modules*")
 vim.cmd("command! MakeTags !ctags -R .")
 
 -- Netrw settings
+-- Example: https://github.com/doom-neovim/doom-nvim/blob/d878cd9a69eb86ad10177d3f974410317ab9f2fe/lua/doom/modules/features/netrw/init.lua
+vim.g.netrw_winsize = -22
 vim.g.netrw_banner = 0
-vim.g.netrw_browse_split = 4
+vim.g.netrw_browse_split = 4444
 vim.g.netrw_altv = 1
 vim.g.netrw_liststyle = 3
+-- show directories first
+vim.g.netrw_sort_sequence = [[[\/]$,*]]
 vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]()
 vim.g.netrw_list_hide = vim.g.netrw_list_hide .. ',\\(^\\|\\s\\s\\)\\zs\\.\\S\\+'
 
