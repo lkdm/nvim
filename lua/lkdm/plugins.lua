@@ -23,5 +23,14 @@ require('pckr').add {
     {
         'mrcjkb/rustaceanvim',
         version = "^5"
-    }
+    },
+
+
+    -- LSP Zero https://lsp-zero.netlify.app/docs/getting-started.html
+    { 'VonHeikemen/lsp-zero.nvim', branch = 'v4.x' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/nvim-cmp' },
+
+    -- Treesitter
+    'nvim-treesitter/nvim-treesitter'
 }

@@ -8,3 +8,6 @@ init:
 link:
 	@echo "Creating link at ~/nvim to this repository."
 	ln -sf $(shell pwd) ~/.config/nvim
+
+rust:
+	rustup component add rust-analyzer
