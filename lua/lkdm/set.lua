@@ -33,8 +33,7 @@ vim.cmd("filetype plugin indent on")
 vim.cmd("syntax on")
 
 -- Set statusline
-vim.opt.statusline = "%f%m%=%y\\ 0x%B\\ %l:%c\\ %p%%"
-
+vim.opt.statusline = "%f%m%=%y 0x%B %l:%c %p%%"
 -- Ignore node_modules in wildmenu
 vim.opt.wildignore:append("*node_modules*")
 
