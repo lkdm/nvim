@@ -32,8 +32,27 @@ require('pckr').add {
     { 'hrsh7th/nvim-cmp' },
 
     -- Treesitter
-    'nvim-treesitter/nvim-treesitter',
+    --'nvim-treesitter/nvim-treesitter',
+
+    -- Markdown
+    -- {
+    --    "OXY2DEV/markview.nvim",
+    --    dependencies = { "nvim-tree/nvim-web-devicons",
+    --                     'nvim-treesitter/nvim-treesitter', },
+    -- },
 
     -- Theme
     'TheNiteCoder/mountaineer.vim'
 }
+
+-- require("markview").setup({
+--     modes = {"n", "no", "c", "i" },
+--     hybrid_modes = { "i" },
+--     -- This is nice to have
+--     callbacks = {
+--         on_enable = function (_, win)
+--             vim.wo[win].conceallevel = 2;
+--             vim.wo[win].concealcursor = "c";
+--         end
+--     }
+-- })

@@ -24,3 +24,22 @@ lsp_zero.extend_lspconfig({
     lsp_attach = lsp_attach,
     capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
+-- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#show-line-diagnostics-automatically-in-hover-window
+-- show line diagnostics automatically on hover
+-- You will likely want to reduce updatetime which affects CursorHold
+-- note: this setting is global and should be set only once
+vim.o.updatetime = 250
+vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+  group = vim.api.nvim_create_augroup("float_diagnostic", { clear = true }),
+  callback = function ()
+    vim.diagnostic.open_float(nil, {focus=false})
+  end
+})
+vim.diagnostic.config({
+  virtual_text = false, -- Hide the virtual text
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+

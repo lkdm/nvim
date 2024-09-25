@@ -31,7 +31,7 @@ vim.opt.wildmenu = true
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.fileencoding = "utf-8"
-vim.opt.clipboard = unamedplus
+-- vim.opt.clipboard = unamedplus
 vim.opt.splitbelow = true               -- If split, new window goes to bottom
 vim.opt.splitright = true               -- If split, new window goes on right
 
@@ -60,6 +60,8 @@ vim.g.netrw_banner = 0
 vim.g.netrw_browse_split = 4444
 vim.g.netrw_altv = 1
 vim.g.netrw_liststyle = 3
+vim.g.netrw_localcopydircmd = 'cp -r'   -- default to recursive copy
+vim.g.netrw_keepdir = 0
 -- show directories first
 vim.g.netrw_sort_sequence = [[[\/]$,*]]
 vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]()
